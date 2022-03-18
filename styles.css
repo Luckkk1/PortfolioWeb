@@ -1,0 +1,93 @@
+/* global */
+:root {
+  /* size */
+  --logo-size: 60px;
+  --logo-name-size: 40px;
+
+  /* font-weight */
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --font-weight-regular: 400;
+
+  /* font-size */
+  --font-size-micro: 14px;
+  --font-size-small: 16px;
+  --font-size-legular: 18px;
+  --font-size-medium: 20px;
+  --font-size-large: 48px;
+
+  /* color */
+  --color-black: #000000;
+  --color-white: #fafafa;
+}
+
+/* typograpy */
+h1 {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+h3 {
+  font-size: var(--font-size-legular);
+  font-weight: var(--font-weight-regular);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+/* body */
+body {
+  font-family: "Open Sans";
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+/* navbar */
+#navbar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-black);
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__icon {
+  width: var(--logo-size);
+}
+
+.logo__name {
+  font-size: var(--logo-name-size);
+}
+
+.menubtn {
+  padding: 12px;
+  margin-right: 18px;
+  font-size: var(--font-size-medium);
+  color: var(--color-white);
+}

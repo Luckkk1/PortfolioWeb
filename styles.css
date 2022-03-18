@@ -12,13 +12,18 @@
   /* font-size */
   --font-size-micro: 14px;
   --font-size-small: 16px;
-  --font-size-legular: 18px;
+  --font-size-regular: 18px;
   --font-size-medium: 20px;
   --font-size-large: 48px;
 
   /* color */
   --color-black: #000000;
-  --color-white: #fafafa;
+  --color-white: #ffffff;
+  --color-light-grey: #cfcfcf;
+  --color-dark-grey: #9e9e9e;
+
+  /* animation duration */
+  --anime-duration: 300ms;
 }
 
 /* typograpy */
@@ -37,6 +42,7 @@ h3 {
   font-weight: var(--font-weight-regular);
 }
 
+/* universal tags */
 * {
   box-sizing: border-box;
 }
@@ -47,6 +53,13 @@ button {
   cursor: pointer;
   background-color: transparent;
 }
+
+/* section centering */
+.section {
+  text-align: center;
+  padding: 50px;
+}
+
 /* body */
 body {
   font-family: "Open Sans";
@@ -65,7 +78,6 @@ a {
   top: 0px;
   width: 100%;
   padding: 12px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,4 +102,107 @@ a {
   margin-right: 18px;
   font-size: var(--font-size-medium);
   color: var(--color-white);
+}
+
+/* home */
+#home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px;
+  background: center/cover no-repeat url(img/home-background.png);
+}
+
+.home__left {
+  color: var(--color-white);
+}
+
+.home__right img {
+  width: 500px;
+  border-radius: 50%;
+}
+
+/* about */
+.about__aboutMe {
+  display: flex;
+  padding-top: 50px;
+}
+
+.about__skillLists {
+  text-align: left;
+  flex-basis: 55%;
+  padding: 50px;
+  border-radius: 10px;
+  margin: 0px;
+  font-size: var(--font-size-regular);
+  color: var(--color-black);
+  background-color: var(--color-light-grey);
+}
+
+.about__skillLists li {
+  padding-top: 20px;
+  list-style: inside;
+}
+
+.about__skillIcons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 45%;
+  padding: 0px 20px;
+}
+
+.skillIcons__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light-grey);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  font-size: 60px;
+  margin: 8px;
+}
+
+.skillIcons__icon i {
+  padding: 12px;
+  transition: all var(--anime-duration) ease;
+}
+
+.skillIcons__icon h2 {
+  font-size: var(--font-size-regular);
+  margin: 0;
+  transition: all var(--anime-duration) ease;
+}
+
+.skillIcons__icon:hover {
+  background-color: var(--color-dark-grey);
+}
+
+.skillIcons__icon:hover i {
+  transform: translateY(-15px) scale(1.1);
+}
+
+.html:hover i {
+  color: red;
+}
+
+.css:hover i {
+  color: blue; /*색따기*/
+}
+
+.js:hover i {
+  color: yellow;
+}
+
+.skillIcons__icon.html:hover h2 {
+  transform: rotate(360deg);
+}
+
+.css:hover h2 {
+  transform: rotate(360deg);
+}
+
+.js:hover h2 {
+  transform: rotate(360deg);
 }

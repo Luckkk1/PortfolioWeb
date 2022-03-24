@@ -21,6 +21,7 @@
   --color-white: #ffffff;
   --color-light-grey: #cfcfcf;
   --color-dark-grey: #9e9e9e;
+  --color-light-navy: #534bae;
 
   /* animation duration */
   --anime-duration: 300ms;
@@ -57,7 +58,7 @@ button {
 /* section centering */
 .section {
   text-align: center;
-  padding: 50px;
+  padding: 100px;
 }
 
 /* body */
@@ -102,6 +103,13 @@ a {
   margin-right: 18px;
   font-size: var(--font-size-medium);
   color: var(--color-white);
+}
+
+.menubtn:hover {
+  border: solid 1px var(--color-white);
+  border-radius: 5px;
+  background-color: var(--color-dark-grey);
+  color: var(--color-black);
 }
 
 /* home */
@@ -205,4 +213,58 @@ a {
 
 .js:hover h2 {
   transform: rotate(360deg);
+}
+
+#skills {
+  background: center/cover no-repeat
+    url(img/하늘\ 야외\ 자연\ 영감\ 인용문\ 데스크톱\ 배경화면.png);
+  color: var(--color-white);
+}
+
+.skills__skillSet {
+  display: flex;
+  justify-content: center;
+}
+
+.skills__skillSet__left {
+  flex-basis: 50%;
+  padding: 20px;
+}
+
+.skills__skillSet__right {
+  flex-basis: 50%;
+  padding: 20px;
+}
+
+.skillDescription {
+  display: flex;
+  justify-content: left;
+  font-size: var(--font-size-medium);
+}
+
+.skillSet__skill {
+  padding: 10px 0px;
+}
+
+.graphAndPercent {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.graph {
+  width: 100%;
+  height: 40px;
+  margin-right: 10px;
+  background-color: var(--color-dark-grey);
+  display: flex;
+  align-items: center;
+  border: solid 1px var(--color-white);
+  border-radius: 5px;
+}
+
+.graph__progress {
+  height: 35px;
+  background-color: #ffb300;
+  border-radius: 5px;
 }

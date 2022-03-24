@@ -22,6 +22,7 @@
   --color-light-grey: #cfcfcf;
   --color-dark-grey: #9e9e9e;
   --color-light-navy: #534bae;
+  --color-yellow: #ffb300;
 
   /* animation duration */
   --anime-duration: 300ms;
@@ -77,6 +78,7 @@ a {
 #navbar {
   position: fixed;
   top: 0px;
+  z-index: 1;
   width: 100%;
   padding: 12px;
   display: flex;
@@ -215,6 +217,7 @@ a {
   transform: rotate(360deg);
 }
 
+/* skills */
 #skills {
   background: center/cover no-repeat
     url(img/하늘\ 야외\ 자연\ 영감\ 인용문\ 데스크톱\ 배경화면.png);
@@ -265,6 +268,84 @@ a {
 
 .graph__progress {
   height: 35px;
-  background-color: #ffb300;
+  background-color: var(--color-yellow);
   border-radius: 5px;
+}
+
+/* works */
+.works__menuBtns {
+  font-size: medium;
+  position: relative;
+  border: solid 1px var(--color-black);
+  padding: 10px 50px;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.works__menuBtns.active {
+  background-color: #f06292;
+  color: var(--color-white);
+}
+
+.works__count {
+  position: absolute;
+  background-color: var(--color-yellow);
+  right: 10px;
+  top: -10px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+}
+
+.works__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.project {
+  position: relative;
+  margin: 5px;
+}
+
+.project img {
+  width: 320px;
+  height: 320px;
+  padding: 5px;
+}
+
+.project__description {
+  position: absolute;
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 320px;
+  height: 320px;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--anime-duration) ease;
+}
+
+.project__description:hover {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__description h3:after {
+  display: block;
+  position: relative;
+  content: "";
+  background-color: var(--color-white);
+  width: 80px;
+  height: 2px;
+  margin-top: 15px;
+}
+
+.project__description h3 {
+  color: var(--color-yellow);
 }

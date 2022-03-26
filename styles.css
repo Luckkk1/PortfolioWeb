@@ -86,7 +86,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;
+  transition: all var(--anime-duration) ease;
+}
+
+#navbar.navbar--dark {
   background-color: var(--color-black);
+  padding: 0;
 }
 
 .navbar__logo {

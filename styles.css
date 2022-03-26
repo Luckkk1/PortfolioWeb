@@ -352,6 +352,7 @@ a {
   color: var(--color-yellow);
 }
 
+/* contact */
 #contact {
   background: center/cover no-repeat url(img/home-background.png);
   color: var(--color-white);

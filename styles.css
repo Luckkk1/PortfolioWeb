@@ -4,6 +4,7 @@
   --logo-size: 60px;
   --contact-logo-size: 50px;
   --logo-name-size: 40px;
+  --home-my-img-size: 500px;
 
   /* font-weight */
   --font-weight-bold: 700;
@@ -122,6 +123,20 @@ a {
   color: var(--color-black);
 }
 
+.navbar__responsiveMenuSelector {
+  position: absolute;
+  display: none;
+  top: 30px;
+  right: 30px;
+  font-size: var(--font-size-large);
+  color: var(--color-white);
+  transition: all var(--anime-duration) ease;
+}
+
+.navbar__responsiveMenuSelector.fit {
+  top: 15px;
+}
+
 /* home */
 #home {
   display: flex;
@@ -135,9 +150,10 @@ a {
   color: var(--color-white);
 }
 
-.home__right img {
-  width: 500px;
+.home__myImg {
+  width: var(--home-my-img-size);
   border-radius: 50%;
+  border: 2px var(--color-white) double;
 }
 
 /* about */
@@ -164,6 +180,7 @@ a {
 
 .about__skillIcons {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   flex-basis: 45%;
   padding: 0px 20px;
@@ -287,6 +304,7 @@ a {
   border: solid 1px var(--color-black);
   padding: 10px 50px;
   font-weight: var(--font-weight-semi-bold);
+  border-radius: 4px;
 }
 
 .works__menuBtns.active {
@@ -376,4 +394,85 @@ a {
 
 .contact__btn i {
   padding: 8px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  :root {
+    /* font-size */
+    --font-size-micro: 10px;
+    --font-size-small: 12px;
+    --font-size-regular: 14px;
+    --font-size-medium: 18px;
+    --font-size-large: 30px;
+
+    /* size */
+    --logo-size: 60px;
+    --logo-name-size: 30px;
+    --home-my-img-size: 300px;
+  }
+
+  .section {
+    padding: 40px;
+  }
+
+  /* navbar */
+  #navbar {
+    background-color: var(--color-black);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menuBtns {
+    display: none;
+  }
+
+  .navbar__menuBtns.on {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar__responsiveMenuSelector {
+    display: block;
+  }
+
+  /* home */
+  #home {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .home__myImg {
+    width: var(--home-my-img-size);
+  }
+
+  /* about */
+  .about__aboutMe {
+    flex-direction: column;
+  }
+
+  /* work */
+  .work__buttonCategory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .works__menuBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
+  .works__projects img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .project__description {
+    width: 250px;
+    height: 250px;
+  }
 }

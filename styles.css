@@ -116,6 +116,10 @@ a {
   color: var(--color-white);
 }
 
+.menubtn.mark {
+  border: var(--color-white) solid 1px;
+}
+
 .menubtn:hover {
   border: solid 1px var(--color-white);
   border-radius: 5px;
@@ -382,6 +386,7 @@ a {
   color: var(--color-white);
   text-align: center;
   padding: 20px;
+  height: 50vh;
 }
 
 #contact h2 {
@@ -435,6 +440,10 @@ a {
 
   .navbar__responsiveMenuSelector {
     display: block;
+  }
+
+  .menubtn {
+    margin: 0;
   }
 
   /* home */

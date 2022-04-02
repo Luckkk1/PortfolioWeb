@@ -32,11 +32,70 @@ navbarResponsiveMenuSelector.addEventListener("click", () => {
   menuBtnContainer.classList.toggle("on");
 });
 
+// 스크롤내리면 홈화면 페이드아웃
+const home = document.querySelector("#home");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// 보는 화면에 해당하는 메뉴에 보더라인 추가
+const sectionIds = ["#home", "#about", "#skills", "#works", "#contact"];
+const sections = sectionIds.map((id) => document.querySelector(id));
+const navItems = sectionIds.map((id) =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
+
+const observerCallback = (entries, obsever) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
+  });
+};
+
+function selectNavItems(selected) {
+  selectedNavItem.classList.remove("mark");
+  selectedNavItem = selected;
+  selectedNavItem.classList.add("mark");
+}
+
+window.addEventListener("wheel", () => {
+  if (window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (
+    window.scrollY + window.innerHeight ===
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItems(navItems[selectedNavIndex]);
+});
+
+const observerObtion = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const observer = new IntersectionObserver(observerCallback, observerObtion);
+sections.forEach((section) => observer.observe(section));
+
 function scrollInto(object) {
   const scrollTo = document.querySelector(object);
   scrollTo.scrollIntoView({
     behavior: "smooth",
   });
-  // 반응형웹에서 메뉴표시바에서 메뉴선택시 표시바 안보이기
+  // 반응형웹에서 메뉴표시바에서 메뉴선택시 표시바 off
   menuBtnContainer.classList.remove("on");
+  // 메뉴클릭시 보는화면 메뉴 보더라인 추가
+  selectNavItems(navItems[sectionIds.indexOf(object)]);
 }

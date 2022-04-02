@@ -17,6 +17,7 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 const navbarResponsiveMenuSelector = document.querySelector(
   ".navbar__responsiveMenuSelector"
 );
+
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
@@ -88,6 +89,23 @@ const observerObtion = {
 
 const observer = new IntersectionObserver(observerCallback, observerObtion);
 sections.forEach((section) => observer.observe(section));
+
+// 스크롤업 버튼 보이기
+const arrowUpBtn = document.querySelector(".arrowUpBtn");
+const mainHome = document.querySelector("#home");
+const mainHomeHeight = mainHome.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  if (window.scrollY > mainHomeHeight / 2) {
+    arrowUpBtn.classList.add("display");
+  } else {
+    arrowUpBtn.classList.remove("display");
+  }
+});
+
+// 스크롤업 버튼 맨위로가기 기능
+arrowUpBtn.addEventListener("click", () => {
+  scrollInto("#home");
+});
 
 function scrollInto(object) {
   const scrollTo = document.querySelector(object);

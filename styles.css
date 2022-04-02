@@ -401,6 +401,29 @@ a {
   padding: 8px;
 }
 
+.arrowUpBtn {
+  position: fixed;
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+  font-size: 50px;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 50%;
+  bottom: 30px;
+  right: 40px;
+  opacity: 0;
+  transition: all var(--anime-duration) ease;
+}
+
+.arrowUpBtn.display {
+  opacity: 1;
+}
+
 /* 반응형 */
 @media screen and (max-width: 768px) {
   :root {

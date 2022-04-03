@@ -302,6 +302,7 @@ a {
 }
 
 /* works */
+
 .works__menuBtns {
   font-size: medium;
   position: relative;
@@ -319,12 +320,26 @@ a {
 .works__count {
   position: absolute;
   background-color: var(--color-yellow);
+  color: var(--color-white);
   right: 10px;
   top: -10px;
   width: 24px;
   height: 24px;
   line-height: 24px;
   border-radius: 50%;
+  transition: all var(--anime-duration) ease;
+  opacity: 0;
+}
+
+.works__menuBtns:hover {
+  background-color: #f06292;
+  color: var(--color-white);
+}
+
+.works__menuBtns.active .works__count,
+.works__menuBtns:hover .works__count {
+  top: 0px;
+  opacity: 1;
 }
 
 .works__projects {
@@ -332,11 +347,21 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  transition: all var(--anime-duration) ease;
+}
+
+.works__projects.animate {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
 }
 
 .project {
   position: relative;
   margin: 5px;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project img {
@@ -386,7 +411,6 @@ a {
   color: var(--color-white);
   text-align: center;
   padding: 20px;
-  height: 50vh;
 }
 
 #contact h2 {

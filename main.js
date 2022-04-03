@@ -80,11 +80,10 @@ window.addEventListener("wheel", () => {
   }
   selectNavItems(navItems[selectedNavIndex]);
 });
-
 const observerObtion = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.3,
+  threshold: 0.4,
 };
 
 const observer = new IntersectionObserver(observerCallback, observerObtion);
@@ -117,3 +116,34 @@ function scrollInto(object) {
   // 메뉴클릭시 보는화면 메뉴 보더라인 추가
   selectNavItems(navItems[sectionIds.indexOf(object)]);
 }
+
+// works 컨텐츠 메뉴 클릭시 액티브효과 && 분류기능
+const worksBtnCategory = document.querySelector(".work__buttonCategory");
+const PjContainer = document.querySelector(".works__projects");
+const projects = document.querySelectorAll(".project");
+
+// 분류기능
+worksBtnCategory.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  projects.forEach((project) => {
+    PjContainer.classList.add("animate");
+    if (filter === "*" || filter === project.dataset.type) {
+      project.classList.remove("invisible");
+    } else {
+      project.classList.add("invisible");
+    }
+    setTimeout(() => {
+      PjContainer.classList.remove("animate");
+    }, 300);
+  });
+  // 액티브효과
+  const worksActive = document.querySelector(".active");
+  worksActive.classList.remove("active");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("active");
+});

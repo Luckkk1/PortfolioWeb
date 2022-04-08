@@ -160,66 +160,112 @@
         </div>
       </div>
     </section>
-    <section id="works" class="section">
+    <section id="works" class=>
       <h1>포트폴리오</h1>
       <h2>프로젝트</h2>
       <div class="work__buttonCategory">
         <button class="works__menuBtns active" data-filter="*">
           All
-          <div class="works__count">6</div>
         </button>
-        <button class="works__menuBtns" data-filter="html">
-          HTML
-          <div class="works__count">1</div>
+        <button class="works__menuBtns" data-filter="portfolio">
+          포트폴리오 웹
         </button>
-        <button class="works__menuBtns" data-filter="css">
-          CSS
-          <div class="works__count">2</div>
+        <button class="works__menuBtns" data-filter="test1">
+          tset1
         </button>
-        <button class="works__menuBtns" data-filter="javascript">
-          JavaScript
-          <div class="works__count">3</div>
+        <button class="works__menuBtns" data-filter="test2">
+          test2
         </button>
       </div>
-
       <div class="works__projects">
-        <a href="#" class="project" data-type="html">
-          <img src="img/oasis.jpeg" alt="thumbnail" />
+        <a href="#" class="project" data-type="*">
+          <img src="img/project__portfolio.png" alt="thumbnail" />
           <div class="project__description">
-            <h3>HTML</h3>
-            <div>Test</div>
+            <h3>포트폴리오 웹</h3>
+            <div>HTML / CSS / JavaScript</div>
           </div> </a
-        ><a href="#" class="project" data-type="css">
-          <img src="img/oasis.jpeg" alt="thumbnail" />
+        ><a href="#" class="project" data-type="*">
+          <img src="img/스크린샷 2022-04-03 오후 6.20.28.png" alt="thumbnail" />
           <div class="project__description">
-            <h3>CSS</h3>
+            <h3>test</h3>
             <div>Test</div>
           </div> </a
-        ><a href="#" class="project" data-type="css">
-          <img src="img/oasis.jpeg" alt="thumbnail" />
+        ><a href="#" class="project" data-type="*">
+          <img src="img/스크린샷 2022-04-03 오후 6.20.47.png" alt="thumbnail" />
           <div class="project__description">
-            <h3>CSS</h3>
+            <h3>test</h3>
             <div>Test</div>
-          </div> </a
-        ><a href="#" class="project" data-type="javascript">
-          <img src="img/oasis.jpeg" alt="thumbnail" />
-          <div class="project__description js">
-            <h3>JavaScript</h3>
-            <div>Test</div>
-          </div></a
-        ><a href="#" class="project" data-type="javascript">
-          <img src="img/oasis.jpeg" alt="thumbnail" />
-          <div class="project__description js">
-            <h3>JavaScript</h3>
-            <div>Test</div>
-          </div> </a
-        ><a href="#" class="project" data-type="javascript">
-          <img src="img/oasis.jpeg" alt="thumbnail" />
-          <div class="project__description js">
-            <h3>JavaScript</h3>
-            <div>Test</div>
+          </div> </a>
+        <div class="pj portfolio " data-type="portfolio">
+          <div class="pj__left">
+            <img src="img/project__portfolio.png" alt="project__thumbnail" />
           </div>
-        </a>
+          <div class="pj__right">
+            <div class="pj__right__description">
+              <h2>포트폴리오 웹사이트</h2>
+              <h3>사용 언어: HTML, CSS, JavaScript </h3>
+              <a href="https://github.com/Luckkk1/PortfolioWeb" target="blank" class="right__shortCut">깃헙 바로가기</a>
+            </div>
+            <div class="pj__right__list">
+              <ul>
+                <li>CSS 글로벌 변수를 설정하여 자주 사용하는 값을 재사용하였습니다.
+                </li>
+                <li>반응형 웹으로 만들어 어떠한 크기의 화면에서도 컨텐츠가 잘 출력되도록 하였습니다.</li>
+                <li>IntersectionObserver Web API를 활용하여 보고 있는 화면을 감지하여 해당하는 메뉴에 강조표시하는 기능을 구현하였습니다.</li>
+                <li>
+                  ScrollintoView를 활용하여 메뉴, 애로우업버튼을   누르면 해당 섹션으로 이동이 가능합니다.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pj portfolio" data-type="test1">
+          <div class="pj__left">
+            <img src="img/스크린샷 2022-04-03 오후 6.20.28.png" alt="project__thumbnail" />
+          </div>
+          <div class="pj__right">
+            <div class="pj__right__description">
+              <h2>포트폴리오 웹사이트</h2>
+            <h3>사용 언어: HTML, CSS, JavaScript </h3>
+            <a href="https://github.com/Luckkk1/PortfolioWeb" target="blank" class="right__shortCut">깃헙 바로가기</a>
+            </div>
+            
+            <div class="pj__right__list">
+              <ul>
+                <li>CSS 글로벌 변수를 설정하여 자주 사용하는 값을 재사용하였습니다.
+                </li>
+                <li>반응형 웹으로 만들어 어떠한 크기의 화면에서도 컨텐츠가 잘 출력되도록 하였습니다.</li>
+                <li>IntersectionObserver Web API를 활용하여 보고 있는 화면을 감지하여 해당하는 메뉴에 강조표시하는 기능을 구현하였습니다.</li>
+                <li>
+                  ScrollIntoView를 활용하여 메뉴, 애로우업버튼을   누르면 해당 섹션으로 이동이 가능합니다.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pj portfolio" data-type="test2">
+          <div class="pj__left">
+            <img src="img/스크린샷 2022-04-03 오후 6.20.47.png" alt="project__thumbnail" />
+          </div>
+          <div class="pj__right">
+            <div class="pj__right__description">
+              <h2>포트폴리오 웹사이트</h2>
+            <h3>사용 언어: HTML, CSS, JavaScript </h3>
+            <a href="https://github.com/Luckkk1/PortfolioWeb" target="blank" class="right__shortCut">깃헙 바로가기</a>
+            </div>
+            <div class="pj__right__list">
+              <ul>
+                <li>CSS 글로벌 변수를 설정하여 자주 사용하는 값을 재사용하였습니다.
+                </li>
+                <li>반응형 웹으로 만들어 어떠한 크기의 화면에서도 컨텐츠가 잘 출력되도록 하였습니다.</li>
+                <li>IntersectionObserver Web API를 활용하여 보고 있는 화면을 감지하여 해당하는 메뉴에 강조표시하는 기능을 구현하였습니다.</li>
+                <li>
+                  ScrollIntoView를 활용하여 메뉴, 애로우업버튼을   누르면 해당 섹션으로 이동이 가능합니다.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="contact">

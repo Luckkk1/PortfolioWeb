@@ -121,6 +121,7 @@ function scrollInto(object) {
 const worksBtnCategory = document.querySelector(".work__buttonCategory");
 const PjContainer = document.querySelector(".works__projects");
 const projects = document.querySelectorAll(".project");
+const pjs = document.querySelectorAll(".pj");
 
 // 분류기능
 worksBtnCategory.addEventListener("click", (e) => {
@@ -128,10 +129,22 @@ worksBtnCategory.addEventListener("click", (e) => {
   if (filter == null) {
     return;
   }
-
+  // 개별메뉴
+  pjs.forEach((pj) => {
+    PjContainer.classList.add("animate");
+    if (filter === pj.dataset.type) {
+      pj.classList.add("visible");
+    } else {
+      pj.classList.remove("visible");
+    }
+    setTimeout(() => {
+      PjContainer.classList.remove("animate");
+    }, 300);
+  });
+  // all메뉴
   projects.forEach((project) => {
     PjContainer.classList.add("animate");
-    if (filter === "*" || filter === project.dataset.type) {
+    if (filter === "*") {
       project.classList.remove("invisible");
     } else {
       project.classList.add("invisible");
@@ -140,6 +153,7 @@ worksBtnCategory.addEventListener("click", (e) => {
       PjContainer.classList.remove("animate");
     }, 300);
   });
+
   // 액티브효과
   const worksActive = document.querySelector(".active");
   worksActive.classList.remove("active");

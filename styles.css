@@ -650,27 +650,10 @@ a {
   }
 }
 
-/* pj 텍스트 넘어감 해결용 */
-/* @media screen and (max-width:1400px) and (min-width:1024px){
-  .pj__left{
-    width: 100%;
-  }
-
-  .pj__left img {
-    width: 70%;
-    height: 100%;
-  }
-
-  .pj__right {
-    width: 70%;
-    height: 100%;
-  }
-} */
 
 /* 해야할일 */
 /*
   3. 차후에 works ALL메뉴에서 썸네일 클릭시 해당 메뉴로 이동하는 기능 구현
-  4. 반응형웹 중간버전
-    4.1  깃헙버튼
   5. 색깔 조정
   6. 문장 정리
+  7. em과 rem 추가하여 더 반응형으로

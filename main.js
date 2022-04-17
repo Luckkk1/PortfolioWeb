@@ -161,3 +161,32 @@ worksBtnCategory.addEventListener("click", (e) => {
     e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
   target.classList.add("active");
 });
+
+const worksBtns = document.querySelectorAll(".works__menuBtns");
+projects.forEach((project) => {
+  project.addEventListener("click", () => {
+    worksBtns.forEach((btn) => {
+      if (project.dataset.type === btn.dataset.filter) {
+        const worksActive = document.querySelector(".active");
+        worksActive.classList.remove("active");
+        btn.classList.add("active");
+      }
+    });
+
+    pjs.forEach((pj) => {
+      PjContainer.classList.add("animate");
+      if (project.dataset.type === pj.dataset.type) {
+        pj.classList.add("visible");
+      } else {
+        pj.classList.remove("visible");
+      }
+      setTimeout(() => {
+        PjContainer.classList.remove("animate");
+      }, 300);
+    });
+
+    for (project of projects) {
+      project.classList.add("invisible");
+    }
+  });
+});

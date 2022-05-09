@@ -233,25 +233,20 @@ a {
 }
 
 .css:hover i {
-  color: #0475bf; /*색따기*/
+  color: #0475bf;
 }
 
 .js:hover i {
   color: #ea7b24;
 }
 
-.skillIcons__icon.html:hover h2 {
-  transform: rotate(360deg);
+.bs:hover i {
+  color: #7852b2;
 }
 
-.css:hover h2 {
+.skillIcons__icon:hover h2 {
   transform: rotate(360deg);
 }
-
-.js:hover h2 {
-  transform: rotate(360deg);
-}
-
 /* skills */
 #skills {
   background: center/cover no-repeat

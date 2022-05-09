@@ -114,6 +114,7 @@ a {
   margin-right: 18px;
   font-size: var(--font-size-medium);
   color: var(--color-white);
+  
 }
 
 .menubtn.mark {
@@ -254,7 +255,7 @@ a {
 /* skills */
 #skills {
   background: center/cover no-repeat
-    url(img/하늘\ 야외\ 자연\ 영감\ 인용문\ 데스크톱\ 배경화면.png);
+    url(img/background2.png);
   color: var(--color-white);
 }
 
@@ -312,6 +313,10 @@ a {
   padding: 100px 0;
 }
 
+.work__buttonCategory {
+  position: relative;
+}
+
 .works__menuBtns {
   font-size: medium;
   position: relative;
@@ -329,6 +334,11 @@ a {
 .works__menuBtns:hover {
   background-color: #f06292;
   color: var(--color-white);
+}
+
+.work__btn__description {
+  position: absolute;
+  right: 3em;
 }
 
 .works__projects {
@@ -380,14 +390,11 @@ a {
   transform: translateY(0px);
 }
 
-.project__description h3:after {
-  display: block;
-  position: relative;
-  content: "";
-  background-color: var(--color-white);
+.project__description__bar {
   width: 80px;
   height: 2px;
-  margin-top: 15px;
+  background-color: white;
+  margin-bottom: 13px;
 }
 
 .project__description h3 {
@@ -409,14 +416,18 @@ a {
 
 .pj__left {
   width: 50%;
+  background-color: black;
 }
 
 .pj__left img {
   width: 100%;
+  height: 100%;
 }
 
 .pj__right {
   width: 50%;
+  background-color: var(--color-light-grey);
+
 }
 
 .pj__right h2,
@@ -571,8 +582,6 @@ a {
     width: 80%;
   }
 
-
-
   .works__projects img {
     width: 100%;
     height: 100%;
@@ -653,7 +662,6 @@ a {
 
 /* 해야할일 */
 /*
-  3. 차후에 works ALL메뉴에서 썸네일 클릭시 해당 메뉴로 이동하는 기능 구현
   5. 색깔 조정
   6. 문장 정리
   7. em과 rem 추가하여 더 반응형으로

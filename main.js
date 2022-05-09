@@ -162,6 +162,7 @@ worksBtnCategory.addEventListener("click", (e) => {
   target.classList.add("active");
 });
 
+// 워크메뉴 썸네일 클릭시 해당 메뉴로 이동
 const worksBtns = document.querySelectorAll(".works__menuBtns");
 projects.forEach((project) => {
   project.addEventListener("click", () => {

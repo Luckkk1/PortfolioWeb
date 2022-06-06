@@ -11,6 +11,12 @@ menuBtnContainer.addEventListener("click", (e) => {
   scrollInto(link);
 });
 
+// 홈화면 자기소개부분 타이핑효과
+const homeTyping = document.querySelector(".home__sayHi");
+document.addEventListener("DOMContentLoaded", () => {
+  new TypeIt(homeTyping).pause(1000).go();
+});
+
 // 홈화면 스크롤 다운시 => 네비게이션바가 transparent 에서 dark로 + padding이 0으로
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;

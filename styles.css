@@ -12,11 +12,11 @@
   --font-weight-regular: 400;
 
   /* font-size */
-  --font-size-micro: 14px;
-  --font-size-small: 16px;
-  --font-size-regular: 18px;
-  --font-size-medium: 20px;
-  --font-size-large: 48px;
+  --font-size-micro: 0.875em;
+  --font-size-small: 1em;
+  --font-size-regular: 1.125em;
+  --font-size-medium: 1.25em;
+  --font-size-large: 3em; 
 
   /* color */
   --color-black: #000000;
@@ -156,6 +156,10 @@ a {
   margin: 0 2.5px;
 }
 
+.home__p {
+  font-size: var(--font-size-medium);
+}
+
 .home__myImg {
   width: var(--home-my-img-size);
   border-radius: 50%;
@@ -249,9 +253,9 @@ a {
 }
 /* skills */
 #skills {
-  background: center/cover no-repeat
-    url(img/background2.png);
-  color: var(--color-white);
+  /* background: center/cover no-repeat
+    url(img/background2.png); */
+  color: var(--color-bl);
 }
 
 .skills__skillSet {

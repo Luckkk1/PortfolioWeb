@@ -168,6 +168,7 @@ a {
 /* home */
 #home {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 130px;
@@ -191,6 +192,19 @@ a {
 .home__right {
   margin: 0 2.5px;
 }
+
+.home__contact {
+  position: absolute;
+  font-size: var(--font-size-large);
+  bottom: 2.5em;
+  left: 3em;
+}
+
+.home__git {
+  padding-right: 0.5em;
+}
+
+
 
 /* about */
 .about__aboutMe {

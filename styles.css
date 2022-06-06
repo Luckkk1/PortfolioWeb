@@ -70,6 +70,14 @@ body {
   font-family: "Open Sans";
   margin: 0;
   padding: 0;
+  background-image: linear-gradient(
+    180deg,
+    #7678ed 0%,
+    #f7b801 40%,
+    #2176ff 100%
+
+  );
+  background-repeat: no-repeat;
 }
 
 a {
@@ -148,7 +156,6 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 130px;
-  background: center/cover no-repeat url(img/home-background.png);
 }
 
 .home__left {
@@ -253,8 +260,6 @@ a {
 }
 /* skills */
 #skills {
-  /* background: center/cover no-repeat
-    url(img/background2.png); */
   color: var(--color-bl);
 }
 
@@ -466,7 +471,6 @@ a {
 
 /* contact */
 #contact {
-  background: center/cover no-repeat url(img/home-background.png);
   color: var(--color-white);
   text-align: center;
   padding: 20px;

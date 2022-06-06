@@ -42,7 +42,7 @@ navbarResponsiveMenuSelector.addEventListener("click", () => {
 });
 
 // 보는 화면에 해당하는 메뉴에 보더라인 추가
-const sectionIds = ["#home", "#about", "#skills", "#works", "#contact"];
+const sectionIds = ["#home", "#about", "#works"];
 const sections = sectionIds.map((id) => document.querySelector(id));
 const navItems = sectionIds.map((id) =>
   document.querySelector(`[data-link="${id}"]`)

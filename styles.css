@@ -88,7 +88,7 @@ body {
   background-image: linear-gradient(
     180deg,
     #7161ef 0%,
-    #f7b801 40%,
+    #2a9d8f 40%,
     #2176ff 100%
 
   );
@@ -211,7 +211,7 @@ a {
 
 .about__skillLists li {
   padding-top: 20px;
-  list-style: inside;
+  list-style:circle;
 }
 
 .about__skillIcons {
@@ -224,19 +224,14 @@ a {
 
 .skillIcons__icon {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
-  background-color: var(--color-light-grey);
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
   font-size: 60px;
   margin: 8px;
 }
 
 .skillIcons__icon i {
-  padding: 12px;
   transition: all var(--anime-duration) ease;
 }
 
@@ -246,84 +241,25 @@ a {
   transition: all var(--anime-duration) ease;
 }
 
-.skillIcons__icon:hover {
-  background-color: var(--color-dark-grey);
-}
-
 .skillIcons__icon:hover i {
   transform: translateY(-15px) scale(1.1);
 }
 
-.html:hover i {
+.html i {
   color: #d94a22;
 }
 
-.css:hover i {
+.css i {
   color: #0475bf;
 }
 
-.js:hover i {
-  color: #ea7b24;
+.js i {
+  color: #ebd418;
+  border:#000000 1px;
 }
 
-.bs:hover i {
+.bs i {
   color: #7852b2;
-}
-
-.skillIcons__icon:hover h2 {
-  transform: rotate(360deg);
-}
-/* skills */
-#skills {
-  color: var(--color-bl);
-}
-
-.skills__skillSet {
-  display: flex;
-  justify-content: center;
-}
-
-.skills__skillSet__left {
-  flex-basis: 50%;
-  padding: 20px;
-}
-
-.skills__skillSet__right {
-  flex-basis: 50%;
-  padding: 20px;
-}
-
-.skillDescription {
-  display: flex;
-  justify-content: left;
-  font-size: var(--font-size-medium);
-}
-
-.skillSet__skill {
-  padding: 10px 0px;
-}
-
-.graphAndPercent {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.graph {
-  width: 100%;
-  height: 40px;
-  margin-right: 10px;
-  background-color: var(--color-dark-grey);
-  display: flex;
-  align-items: center;
-  border: solid 1px var(--color-white);
-  border-radius: 5px;
-}
-
-.graph__progress {
-  height: 35px;
-  background-color: var(--color-yellow);
-  border-radius: 5px;
 }
 
 /* works */
@@ -482,25 +418,6 @@ a {
 
 .pj__right li {
   padding: 20px 10px;
-}
-
-/* contact */
-#contact {
-  color: var(--color-white);
-  text-align: center;
-  padding: 20px;
-}
-
-#contact h2 {
-  font-size: 32px;
-}
-
-.contact__btn {
-  font-size: var(--contact-logo-size);
-}
-
-.contact__btn i {
-  padding: 8px;
 }
 
 .arrowUpBtn {

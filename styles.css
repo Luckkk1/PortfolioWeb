@@ -26,6 +26,7 @@
   --color-light-navy: #534bae;
   --color-yellow: #ffb300;
   --color-purple: #673ab7;
+  --color-pink: #e54f6d;
 
   /* animation duration */
   --anime-duration: 300ms;
@@ -296,12 +297,12 @@ a {
 }
 
 .works__menuBtns.active {
-  background-color: #f06292;
+  background-color: var(--color-pink);
   color: var(--color-white);
 }
 
 .works__menuBtns:hover {
-  background-color: #f06292;
+  background-color: var(--color-pink);
   color: var(--color-white);
 }
 
@@ -314,7 +315,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  margin-top: 3em;
+  padding: 1.2em;
   transition: all var(--anime-duration) ease;
 }
 
@@ -432,6 +434,7 @@ a {
 
 .pj__right li {
   padding: 20px 10px;
+  list-style:decimal;
 }
 
 .arrowUpBtn {

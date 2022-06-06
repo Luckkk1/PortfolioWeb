@@ -50,7 +50,7 @@
         </p>
       </div>
       <div class="home__right" data-scroll>
-        <img src="img/oasis.jpeg" alt="profileImg" class="home__myImg" />
+        <img src="img/profile.png" alt="profileImg" class="home__myImg" />
       </div>
       <div class="home__contact">
         <a href="https://github.com/Luckkk1"
@@ -100,41 +100,102 @@
       <h2>프로젝트</h2>
       <div class="work__buttonCategory">
         <button class="works__menuBtns active" data-filter="*">All</button>
-        <button class="works__menuBtns" data-filter="portfolio">
-          포트폴리오 웹
+        <button class="works__menuBtns" data-filter="utill">
+          다양한 유틸웹
         </button>
         <button class="works__menuBtns" data-filter="bootstrap">
           부트스트랩 반응형 웹
         </button>
-        <button class="works__menuBtns" data-filter="test2">test2</button>
+        <button class="works__menuBtns" data-filter="portfolio">
+          포트폴리오 웹
+        </button>
       </div>
 
       <div class="works__projects">
-        <a class="project" data-type="portfolio">
-          <img src="img/pj1.png" alt="thumbnail" />
+        <a class="project" data-type="utill">
+          <img src="img/pj3.png" alt="thumbnail" />
           <div class="project__description">
-            <h3>포트폴리오 웹</h3>
+            <h3>다양한 유틸웹</h3>
             <div class="project__description__bar"></div>
             <div>HTML / CSS / JavaScript</div>
-          </div> </a
-        ><a class="project" data-type="test1">
+          </div>
+        </a>
+        <a class="project" data-type="bootstrap">
           <img src="img/pj2.png" alt="thumbnail" />
           <div class="project__description">
             <h3>부트스트랩 반응형 웹사이트</h3>
             <div class="project__description__bar"></div>
             <div>HTML / CSS / Bootstrap</div>
           </div> </a
-        ><a class="project" data-type="test2">
-          <img
-            src="img/스크린샷 2022-04-03 오후 6.20.47.png"
-            alt="thumbnail"
-          />
+        ><a class="project" data-type="portfolio">
+          <img src="img/pj1.png" alt="thumbnail" />
           <div class="project__description">
-            <h3>test</h3>
+            <h3>포트폴리오 웹</h3>
             <div class="project__description__bar"></div>
-            <div>Test</div>
+            <div>HTML / CSS / JavaScript</div>
           </div>
         </a>
+
+        <div class="pj portfolio" data-type="utill">
+          <div class="pj__left">
+            <img src="img/pj3.png" alt="project__thumbnail" />
+          </div>
+          <div class="pj__right">
+            <div class="pj__right__description">
+              <h2>다양한 유틸웹</h2>
+              <h3>사용 언어: HTML, CSS, JavaScript</h3>
+              <a
+                href="https://github.com/Luckkk1/Mydesk"
+                target="blank"
+                class="right__shortCut"
+                >깃헙 바로가기</a
+              >
+            </div>
+            <div class="pj__right__list">
+              <ul>
+                <li>Javascript 기능 위주로 만들어 보았습니다.</li>
+                <li>
+                  서버의 API를 받아와서 현재의 비트코인 가격을 알 수 있습니다.
+                </li>
+                <li>
+                  Color class를 만들어서 method를 추가하여 배경이나 폰트색 등을
+                  바꿀 수 있도록 하였습니다.
+                </li>
+                <li>다양한 DOM 이벤트를 활용해보았습니다.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="pj portfolio" data-type="bootstrap">
+          <div class="pj__left">
+            <img src="img/pj2.png" alt="project__thumbnail" />
+          </div>
+          <div class="pj__right">
+            <div class="pj__right__description">
+              <h2>부트스트랩 반응형 웹사이트</h2>
+              <h3>사용 언어: HTML, CSS, Bootstrap</h3>
+              <a
+                href="https://github.com/Luckkk1/bootstrap-responsive-pj"
+                target="blank"
+                class="right__shortCut"
+                >깃헙 바로가기</a
+              >
+            </div>
+
+            <div class="pj__right__list">
+              <ul>
+                <li>CSS 이용을 최소화하고 Bootstrap을 이용했습니다.</li>
+                <li>Bootstrap의 다양한 기능을 구현하였습니다.</li>
+                <li>
+                  px 보단 Rem, em, 그리고 %를 이용하여 어떤 화면사이즈에서도
+                  원하는 화면이 사용자에게 구현될 수 있게 하였습니다.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <div class="pj portfolio" data-type="portfolio">
           <div class="pj__left">
             <img src="img/pj1.png" alt="project__thumbnail" />
@@ -166,71 +227,6 @@
                 </li>
                 <li>
                   ScrollintoView를 활용하여 메뉴, 애로우업버튼을 누르면 해당
-                  섹션으로 이동이 가능합니다.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="pj portfolio" data-type="bootstrap">
-          <div class="pj__left">
-            <img src="img/pj2.png" alt="project__thumbnail" />
-          </div>
-          <div class="pj__right">
-            <div class="pj__right__description">
-              <h2>부트스트랩 반응형 웹사이트</h2>
-              <h3>사용 언어: HTML, CSS, Bootstrap</h3>
-              <a
-                href="https://github.com/Luckkk1/bootstrap-responsive-pj"
-                target="blank"
-                class="right__shortCut"
-                >깃헙 바로가기</a
-              >
-            </div>
-
-            <div class="pj__right__list">
-              <ul>
-                <li>CSS 이용을 최소화하고 Bootstrap을 이용했습니다.</li>
-                <li>Bootstrap의 다양한 기능을 구현하였습니다.</li>
-                <li>
-                  px 보단 Rem, em, 그리고 %를 이용하여 어떤 화면사이즈에서도
-                  원하는 화면이 사용자에게 구현될 수 있게 하였습니다.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="pj portfolio" data-type="test2">
-          <div class="pj__left">
-            <img src="img/home-background.png" alt="project__thumbnail" />
-          </div>
-          <div class="pj__right">
-            <div class="pj__right__description">
-              <h2>포트폴리오 웹사이트</h2>
-              <h3>사용 언어: HTML, CSS, JavaScript</h3>
-              <a
-                href="https://github.com/Luckkk1/PortfolioWeb"
-                target="blank"
-                class="right__shortCut"
-                >깃헙 바로가기</a
-              >
-            </div>
-            <div class="pj__right__list">
-              <ul>
-                <li>
-                  CSS 글로벌 변수를 설정하여 자주 사용하는 값을
-                  재사용하였습니다.
-                </li>
-                <li>
-                  반응형 웹으로 만들어 어떠한 크기의 화면에서도 컨텐츠가 잘
-                  출력되도록 하였습니다.
-                </li>
-                <li>
-                  IntersectionObserver Web API를 활용하여 보고 있는 화면을
-                  감지하여 해당하는 메뉴에 강조표시하는 기능을 구현하였습니다.
-                </li>
-                <li>
-                  ScrollIntoView를 활용하여 메뉴, 애로우업버튼을 누르면 해당
                   섹션으로 이동이 가능합니다.
                 </li>
               </ul>

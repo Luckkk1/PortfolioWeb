@@ -22,7 +22,8 @@
     />
     <!-- type it -->
     <script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
-
+    <!-- scroll out -->
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   </head>
   <body>
     <section id="navbar">
@@ -41,18 +42,20 @@
         <i class="fa-solid fa-bars"></i>
       </button>
     </section>
-    <section id="home">
+    <section id="home" data-scroll>
       <div class="home__left">
         <h1 class="home__sayHi">반갑습니다, <br />제 이름은 이윤석 입니다!</h1>
         <p class="home__p">저는 코딩이 재밌습니다.</p>
         <p class="home__p">앞으로도 다양한 기술들을 배워나가고 싶습니다.</p>
-        <p class="home__p">최고의 개발자가 되기 위하여 오늘도 열심히 달리고 있습니다!</p>
+        <p class="home__p">
+          최고의 개발자가 되기 위하여 오늘도 열심히 달리고 있습니다!
+        </p>
       </div>
-      <div class="home__right">
+      <div class="home__right" data-scroll>
         <img src="img/oasis.jpeg" alt="profileImg" class="home__myImg" />
       </div>
     </section>
-    <section id="about" class="section">
+    <section id="about" class="section" data-scroll>
       <h1>나라는 사람에 대하여</h1>
       <h2>
         프론트엔드 개발자에게 가장 중요한게 무엇이냐고 묻는다면 커뮤니케이션
@@ -100,7 +103,7 @@
         </div>
       </div>
     </section>
-    <section id="skills" class="section">
+    <section id="skills" class="section" data-scroll>
       <h1>스킬</h1>
       <h2>내가 잘할 수 있는 것 그리고 더 노력해야 하는 것</h2>
       <div class="skills__skillSet">
@@ -164,64 +167,78 @@
         </div>
       </div>
     </section>
-    <section id="works" class=>
+    <section id="works" class="section" data-scroll>
       <h1>포트폴리오</h1>
       <h2>프로젝트</h2>
       <div class="work__buttonCategory">
-        <button class="works__menuBtns active" data-filter="*">
-          All
-        </button>
+        <button class="works__menuBtns active" data-filter="*">All</button>
         <button class="works__menuBtns" data-filter="portfolio">
           포트폴리오 웹
         </button>
         <button class="works__menuBtns" data-filter="bootstrap">
           부트스트랩 반응형 웹
         </button>
-        <button class="works__menuBtns" data-filter="test2">
-          test2
-        </button>
+        <button class="works__menuBtns" data-filter="test2">test2</button>
       </div>
 
       <div class="works__projects">
-        <a  class="project" data-type="portfolio">
+        <a class="project" data-type="portfolio">
           <img src="img/pj1.png" alt="thumbnail" />
           <div class="project__description">
             <h3>포트폴리오 웹</h3>
             <div class="project__description__bar"></div>
             <div>HTML / CSS / JavaScript</div>
           </div> </a
-        ><a  class="project" data-type="test1">
+        ><a class="project" data-type="test1">
           <img src="img/pj2.png" alt="thumbnail" />
           <div class="project__description">
             <h3>부트스트랩 반응형 웹사이트</h3>
             <div class="project__description__bar"></div>
             <div>HTML / CSS / Bootstrap</div>
           </div> </a
-        ><a  class="project" data-type="test2">
-          <img src="img/스크린샷 2022-04-03 오후 6.20.47.png" alt="thumbnail" />
+        ><a class="project" data-type="test2">
+          <img
+            src="img/스크린샷 2022-04-03 오후 6.20.47.png"
+            alt="thumbnail"
+          />
           <div class="project__description">
             <h3>test</h3>
             <div class="project__description__bar"></div>
             <div>Test</div>
-          </div> </a>
-        <div class="pj portfolio " data-type="portfolio">
+          </div>
+        </a>
+        <div class="pj portfolio" data-type="portfolio">
           <div class="pj__left">
             <img src="img/pj1.png" alt="project__thumbnail" />
           </div>
           <div class="pj__right">
             <div class="pj__right__description">
               <h2>포트폴리오 웹사이트</h2>
-              <h3>사용 언어: HTML, CSS, JavaScript </h3>
-              <a href="https://github.com/Luckkk1/PortfolioWeb" target="blank" class="right__shortCut">깃헙 바로가기</a>
+              <h3>사용 언어: HTML, CSS, JavaScript</h3>
+              <a
+                href="https://github.com/Luckkk1/PortfolioWeb"
+                target="blank"
+                class="right__shortCut"
+                >깃헙 바로가기</a
+              >
             </div>
             <div class="pj__right__list">
               <ul>
-                <li>CSS 글로벌 변수를 설정하여 자주 사용하는 값을 재사용하였습니다.
-                </li>
-                <li>반응형 웹으로 만들어 어떠한 크기의 화면에서도 컨텐츠가 잘 출력되도록 하였습니다.</li>
-                <li>IntersectionObserver Web API를 활용하여 보고 있는 화면을 감지하여 해당하는 메뉴에 강조표시하는 기능을 구현하였습니다.</li>
                 <li>
-                  ScrollintoView를 활용하여 메뉴, 애로우업버튼을   누르면 해당 섹션으로 이동이 가능합니다.
+                  CSS 글로벌 변수를 설정하여 자주 사용하는 값을
+                  재사용하였습니다.
+                </li>
+                <li>
+                  반응형 웹으로 만들어 어떠한 크기의 화면에서도 컨텐츠가 잘
+                  출력되도록 하였습니다.
+                </li>
+                <li>
+                  IntersectionObserver Web API를 활용하여 보고 있는 화면을
+                  감지하여 해당하는 메뉴에 강조표시하는 기능을 구현하였습니다.
+                </li>
+                <li>
+                  ScrollintoView를 활용하여 메뉴, 애로우업버튼을 누르면 해당
+                  섹션으로 이동이 가능합니다.
                 </li>
               </ul>
             </div>
@@ -234,16 +251,23 @@
           <div class="pj__right">
             <div class="pj__right__description">
               <h2>부트스트랩 반응형 웹사이트</h2>
-            <h3>사용 언어: HTML, CSS, Bootstrap </h3>
-            <a href="https://github.com/Luckkk1/bootstrap-responsive-pj" target="blank" class="right__shortCut">깃헙 바로가기</a>
+              <h3>사용 언어: HTML, CSS, Bootstrap</h3>
+              <a
+                href="https://github.com/Luckkk1/bootstrap-responsive-pj"
+                target="blank"
+                class="right__shortCut"
+                >깃헙 바로가기</a
+              >
             </div>
-            
+
             <div class="pj__right__list">
               <ul>
-                <li>CSS 이용을 최소화하고 Bootstrap을 이용했습니다.
-                </li>
+                <li>CSS 이용을 최소화하고 Bootstrap을 이용했습니다.</li>
                 <li>Bootstrap의 다양한 기능을 구현하였습니다.</li>
-                <li>px 보단 Rem, em, 그리고 %를 이용하여 어떤 화면사이즈에서도 원하는 화면이 사용자에게 구현될 수 있게 하였습니다. </li>
+                <li>
+                  px 보단 Rem, em, 그리고 %를 이용하여 어떤 화면사이즈에서도
+                  원하는 화면이 사용자에게 구현될 수 있게 하였습니다.
+                </li>
               </ul>
             </div>
           </div>
@@ -255,17 +279,31 @@
           <div class="pj__right">
             <div class="pj__right__description">
               <h2>포트폴리오 웹사이트</h2>
-            <h3>사용 언어: HTML, CSS, JavaScript </h3>
-            <a href="https://github.com/Luckkk1/PortfolioWeb" target="blank" class="right__shortCut">깃헙 바로가기</a>
+              <h3>사용 언어: HTML, CSS, JavaScript</h3>
+              <a
+                href="https://github.com/Luckkk1/PortfolioWeb"
+                target="blank"
+                class="right__shortCut"
+                >깃헙 바로가기</a
+              >
             </div>
             <div class="pj__right__list">
               <ul>
-                <li>CSS 글로벌 변수를 설정하여 자주 사용하는 값을 재사용하였습니다.
-                </li>
-                <li>반응형 웹으로 만들어 어떠한 크기의 화면에서도 컨텐츠가 잘 출력되도록 하였습니다.</li>
-                <li>IntersectionObserver Web API를 활용하여 보고 있는 화면을 감지하여 해당하는 메뉴에 강조표시하는 기능을 구현하였습니다.</li>
                 <li>
-                  ScrollIntoView를 활용하여 메뉴, 애로우업버튼을   누르면 해당 섹션으로 이동이 가능합니다.
+                  CSS 글로벌 변수를 설정하여 자주 사용하는 값을
+                  재사용하였습니다.
+                </li>
+                <li>
+                  반응형 웹으로 만들어 어떠한 크기의 화면에서도 컨텐츠가 잘
+                  출력되도록 하였습니다.
+                </li>
+                <li>
+                  IntersectionObserver Web API를 활용하여 보고 있는 화면을
+                  감지하여 해당하는 메뉴에 강조표시하는 기능을 구현하였습니다.
+                </li>
+                <li>
+                  ScrollIntoView를 활용하여 메뉴, 애로우업버튼을 누르면 해당
+                  섹션으로 이동이 가능합니다.
                 </li>
               </ul>
             </div>
@@ -273,7 +311,7 @@
         </div>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" data-scroll>
       <h1>저에 대해 더 알고 싶으신가요?</h1>
       <h2>dldbstjr4444@gmail.com</h2>
       <div class="contact__btn">

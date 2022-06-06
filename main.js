@@ -1,4 +1,6 @@
 "use strict";
+// 바디 스크롤아웃
+ScrollOut();
 
 // 네비게이션바에서 메뉴 선택시 해당 컨텐츠로 이동
 const menuBtnContainer = document.querySelector(".navbar__menuBtns");
@@ -37,13 +39,6 @@ document.addEventListener("scroll", () => {
 // 반응형웹일때 메뉴표시바를 켜고 끄기
 navbarResponsiveMenuSelector.addEventListener("click", () => {
   menuBtnContainer.classList.toggle("on");
-});
-
-// 스크롤내리면 홈화면 페이드아웃
-const home = document.querySelector("#home");
-const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener("scroll", () => {
-  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 // 보는 화면에 해당하는 메뉴에 보더라인 추가

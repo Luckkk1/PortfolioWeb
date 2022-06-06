@@ -65,6 +65,21 @@ button {
   padding: 100px;
 }
 
+/* scroll out */
+[data-scroll] {
+  will-change: transform, scale, opcity;
+  transform:scale(0.7),translateY(10rem);
+  transition: all 1.5s ease-in-out;
+}
+[data-scroll="in"] {
+  opacity: 1;
+  transform: scale(1),translateY(0);
+
+}
+[data-scroll="out"] {
+  opacity: 0;
+}
+
 /* body */
 body {
   font-family: "Open Sans";
@@ -72,7 +87,7 @@ body {
   padding: 0;
   background-image: linear-gradient(
     180deg,
-    #7678ed 0%,
+    #7161ef 0%,
     #f7b801 40%,
     #2176ff 100%
 

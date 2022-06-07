@@ -169,13 +169,13 @@ a {
 /* home */
 #home {
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 130px;
 }
 
 .home__left {
+  position: relative;
   color: var(--color-white);
   margin: 0 2.5px;
 }
@@ -197,8 +197,8 @@ a {
 .home__contact {
   position: absolute;
   font-size: var(--font-size-large);
-  bottom: 2.5em;
-  left: 3em;
+  bottom: -1.5em;
+  left: 0em;
 }
 
 .home__git {
@@ -294,6 +294,7 @@ a {
   padding: 10px 50px;
   font-weight: var(--font-weight-semi-bold);
   border-radius: 4px;
+  transition: all ease-in-out 200ms;
 }
 
 .works__menuBtns.active {
@@ -509,15 +510,25 @@ a {
   #home {
     display: flex;
     flex-direction: column-reverse;
+    padding: 150px 50px;
   }
 
   .home__myImg {
     width: var(--home-my-img-size);
   }
 
+  .home__contact {
+    left: 0em;
+    bottom: -1.5em;
+  }
+
   /* about */
   .about__aboutMe {
     flex-direction: column;
+  }
+
+  .skillIcons__icon {
+    padding-top: 1em;
   }
 
   /* work */
@@ -585,8 +596,18 @@ a {
     width: 400px;
   }
 
+  .home__contact {
+    left: 0em;
+    bottom: -1.5em;
+  }
+
   .about__aboutMe {
     flex-direction: column;
+  }
+  
+
+  .skillIcons__icon {
+    padding-top: 1em;
   }
 
   .works__projects {

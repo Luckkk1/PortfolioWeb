@@ -330,6 +330,10 @@ a {
   margin: 5px;
 }
 
+.works__smProject:hover {
+  cursor: pointer;
+}
+
 .works__smProject.invisible {
   display: none;
 }

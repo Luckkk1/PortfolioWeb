@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 네비게이션바에서 메뉴 선택시 해당 컨텐츠로 이동
 const menuBtnContainer = document.querySelector('.navbar__menuBtns');
-menuBtnContainer.addEventListener('click', (e) => {
+menuBtnContainer.addEventListener('click', e => {
   const target = e.target;
   const link = target.dataset.link;
   if (link === null) {
@@ -43,8 +43,8 @@ navbarResponsiveMenuSelector.addEventListener('click', () => {
 
 // 보는 화면에 해당하는 메뉴에 보더라인 추가
 const sectionIds = ['#home', '#about', '#works'];
-const sections = sectionIds.map((id) => document.querySelector(id));
-const navItems = sectionIds.map((id) =>
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id =>
   document.querySelector(`[data-link="${id}"]`)
 );
 
@@ -52,7 +52,7 @@ let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
 
 const observerCallback = (entries, obsever) => {
-  entries.forEach((entry) => {
+  entries.forEach(entry => {
     if (!entry.isIntersecting && entry.intersectionRatio > 0) {
       const index = sectionIds.indexOf(`#${entry.target.id}`);
       if (entry.boundingClientRect.y < 0) {
@@ -88,7 +88,7 @@ const observerObtion = {
 };
 
 const observer = new IntersectionObserver(observerCallback, observerObtion);
-sections.forEach((section) => observer.observe(section));
+sections.forEach(section => observer.observe(section));
 
 // 스크롤업 버튼 보이기
 const arrowUpBtn = document.querySelector('.arrowUpBtn');
@@ -125,13 +125,13 @@ const projects = document.querySelectorAll('.works__smProject');
 const pjs = document.querySelectorAll('.works__project');
 
 // 분류기능
-worksBtnCategory.addEventListener('click', (e) => {
+worksBtnCategory.addEventListener('click', e => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
   }
   // 개별메뉴
-  pjs.forEach((pj) => {
+  pjs.forEach(pj => {
     PjContainer.classList.add('animate');
     if (filter === pj.dataset.type) {
       pj.classList.add('visible');
@@ -143,7 +143,7 @@ worksBtnCategory.addEventListener('click', (e) => {
     }, 300);
   });
   // all메뉴
-  projects.forEach((project) => {
+  projects.forEach(project => {
     PjContainer.classList.add('animate');
     if (filter === '*') {
       project.classList.remove('invisible');
@@ -165,9 +165,9 @@ worksBtnCategory.addEventListener('click', (e) => {
 
 // 워크메뉴 썸네일 클릭시 해당 메뉴로 이동
 const worksBtns = document.querySelectorAll('.works__menuBtn');
-projects.forEach((project) => {
+projects.forEach(project => {
   project.addEventListener('click', () => {
-    worksBtns.forEach((btn) => {
+    worksBtns.forEach(btn => {
       if (project.dataset.type === btn.dataset.filter) {
         const worksActive = document.querySelector('.active');
         worksActive.classList.remove('active');
@@ -175,9 +175,10 @@ projects.forEach((project) => {
       }
     });
 
-    pjs.forEach((pj) => {
+    pjs.forEach(pj => {
       PjContainer.classList.add('animate');
       if (project.dataset.type === pj.dataset.type) {
+        console.log(project.dataset.type);
         pj.classList.add('visible');
       } else {
         pj.classList.remove('visible');
@@ -187,7 +188,7 @@ projects.forEach((project) => {
       }, 300);
     });
 
-    for (project of projects) {
+    for (let project of projects) {
       project.classList.add('invisible');
     }
   });

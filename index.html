@@ -104,6 +104,9 @@
       <h1 class="typeIt">Project</h1>
       <div class="works__buttonCategory">
         <button class="works__menuBtn active" data-filter="*">All</button>
+        <button class="works__menuBtn" data-filter="gameSearch">
+          게임 서칭 앱
+        </button>
         <button class="works__menuBtn" data-filter="orderFood">
           음식 주문 웹
         </button>
@@ -119,6 +122,14 @@
       </div>
 
       <div class="works__smProjects">
+        <a class="works__smProject" data-type="gameSearch">
+          <img src="img/pj5.png" alt="thumbnail" />
+          <div class="works__smPjDescription">
+            <h3>게임 서칭 앱</h3>
+            <div class="works__smPjDescriptionBar"></div>
+            <div>React</div>
+          </div>
+        </a>
         <a class="works__smProject" data-type="orderFood">
           <img src="img/pj4.png" alt="thumbnail" />
           <div class="works__smPjDescription">
@@ -150,6 +161,35 @@
             <div>HTML / CSS / JavaScript</div>
           </div>
         </a>
+
+        <div
+          class="works__project works__project--portfolio"
+          data-type="gameSearch"
+        >
+          <div class="works__leftPj">
+            <img src="img/pj5.png" alt="project__thumbnail" />
+          </div>
+          <div class="works__rightPj">
+            <div class="works__rightDescription">
+              <h2>게임 서칭 웹</h2>
+              <h3>사용 스택: React</h3>
+              <a
+                href="https://github.com/Luckkk1/game-search-app"
+                target="blank"
+                class="works__rightShortCut"
+                >깃헙 바로가기</a
+              >
+            </div>
+            <div class="works__rightList">
+              <ul>
+                <li>Firebase의 Auth 기능을 활용한 사용자 인증 기능</li>
+                <li>로그인, 회원가입 시 개별적인 유효성검사</li>
+                <li>외부 API를 활용한 다양한 기능</li>
+                <li>커스텀훅을 이용하여 반복되는 작업 최소화</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <div
           class="works__project works__project--portfolio"
